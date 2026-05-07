@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+
+    #menuButton {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 250px 1fr;
+        align-items: center;
+    }
+
+    #courseContainer {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 231 | Home</title>
+
+    <meta name="description" content="WDD 231 course homepage showcasing web development projects, certificates, and responsive design principles.">
+
+    <meta name="author" content="Osasere">
+
+    <meta property="og:title" content="WDD 231 Homepage">
+    <meta property="og:description" content="Responsive course homepage project for WDD 231.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="branding">
+            <img src="images/Blue and Black Modern Gradient Software Development Technology Logo.png" alt="Site Logo" width="50" height="50">
+            <span>OS DEVELOPMENT</span>
+        </div>
+
+        <button id="menuButton" aria-label="Toggle Navigation Menu"></button>
+    </div>
+
+    <nav id="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Chamber</a>
+        <a href="#">Final</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Home</h1>
+
+    <div class="main-grid">
+
+        <section class="card about-card">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/FSY 2025 BOOTCAMP BY MEGATRONIMAGERY PORTRAITS_601.JPG" alt="Profile Photo" loading="lazy" width="300" height="300">
+
+                <p>
+                    Hello! I am a web development student currently studying responsive design,
+                    accessibility, JavaScript, and modern web technologies in WDD 231.
+                    I enjoy building clean and responsive websites.
+                </p>
+ </div>
+        </section>
+
+        <section class="card location-card">
+            <h2>Student Information</h2>
+
+            <ul>
+                <li><strong>Name:</strong> Osasere Aibangbee</li>
+                <li><strong>Country:</strong> Nigeria</li>
+                <li><strong>Program:</strong> Software Development</li>
+                <li><strong>Focus:</strong> Web Development</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <section class="card certificate-section">
+
+        <h2>Web and Computer Programming Certificate</h2>
+
+        <div class="filter-buttons">
+            <button id="allCourses">All Courses</button>
+            <button id="wddCourses">WDD Courses</button>
+            <button id="cseCourses">CSE Courses</button>
+        </div>
+
+        <div id="courseContainer"></div>
+
+        <p id="totalCredits"></p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="social-links">
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
+            GitHub
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            LinkedIn
+        </a>
+
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            Instagram
+        </a>
+    </div>
+
+    <p>
+        &copy; <span id="currentYear"></span> OSASERE AIBANGBEE | Nigeria
+    </p>
+
+    <p id="lastModified"></p>
+
+</footer>
+
+</body>
+</html>
