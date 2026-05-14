@@ -1,0 +1,71 @@
+[
+  {
+    "name": "NovaPlay Studios",
+    "address": "Lagos, Nigeria",
+    "phone": "+2347011111111",
+    "website": "https://novaplay.com",
+    "image": "images/game1.webp",
+    "membership": 3,
+    "description": "AAA game development and animation studio."
+  },
+
+  {
+    "name": "Pixel Arena",
+    "address": "Abuja, Nigeria",
+    "phone": "+2347022222222",
+    "website": "https://pixelarena.com",
+    "image": "images/game2.webp",
+    "membership": 2,
+    "description": "Esports and competitive gaming company."
+  },
+
+  {
+    "name": "CodeQuest Labs",
+    "address": "Ibadan, Nigeria",
+    "phone": "+2347033333333",
+    "website": "https://codequest.com",
+    "image": "images/game3.webp",
+    "membership": 1,
+    "description": "Indie game and mobile app developers."
+  },
+
+  {
+    "name": "Skyline Interactive",
+    "address": "Port Harcourt, Nigeria",
+    "phone": "+2347044444444",
+    "website": "https://skylineinteractive.com",
+    "image": "images/game4.webp",
+    "membership": 3,
+    "description": "Creative gaming and streaming studio."
+  },
+
+  {
+    "name": "RenderCore",
+    "address": "Enugu, Nigeria",
+    "phone": "+2347055555555",
+    "website": "https://rendercore.com",
+    "image": "images/game5.webp",
+    "membership": 2,
+    "description": "3D rendering and visual design company."
+  },
+
+  {
+    "name": "LevelUp Gaming",
+    "address": "Benin City, Nigeria",
+    "phone": "+2347066666666",
+    "website": "https://levelupgaming.com",
+    "image": "images/game6.webp",
+    "membership": 1,
+    "description": "Gaming community and tournament organizers."
+  },
+
+  {
+    "name": "CyberForge Studios",
+    "address": "Kano, Nigeria",
+    "phone": "+2347077777777",
+    "website": "https://cyberforge.com",
+    "image": "images/game7.webp",
+    "membership": 3,
+    "description": "VR and futuristic gaming experiences."
+  }
+]

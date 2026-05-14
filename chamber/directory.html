@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameDev Chamber | Directory</title>
+
+    <meta name="description" content="Explore gaming studios, developers, streamers, and creative tech businesses in the GameDev Chamber.">
+
+    <meta name="author" content="Osasere">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GameDev Chamber Directory">
+    <meta property="og:description" content="Discover gaming and tech creators across Nigeria.">
+    <meta property="og:image" content="images/logo.webp">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+<header>
+
+    <nav class="navigation-bar">
+
+        <a href="index.html" class="logo-container">
+
+            <img src="images/11224.jpg" alt="GameDev Chamber Logo" class="logo-image">
+
+            <div>
+                <h1>GameDev Chamber</h1>
+                <p>Gaming • Tech • Creativity</p>
+            </div>
+
+        </a>
+
+        <button id="menu-button" aria-label="Open Navigation Menu">
+            ☰
+        </button>
+
+        <ul class="navigation-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+ </nav>
+
+</header>
+
+<main id="main-content">
+
+    <section class="hero-section">
+
+        <h2>Gaming & Tech Directory</h2>
+
+        <p>
+            Explore gaming studios, developers, esports brands,
+            streamers, animation creators, and tech innovators.
+        </p>
+
+    </section>
+
+    <section class="toggle-buttons">
+
+        <button id="grid-view">
+            Grid View
+        </button>
+
+        <button id="list-view">
+            List View
+        </button>
+
+    </section>
+
+    <section id="members" class="directory-grid"></section>
+
+</main>
+
+<footer>
+
+    <section>
+        <h3>GameDev Chamber</h3>
+        <p>20 Tech Avenue, Lagos, Nigeria</p>
+        <p>support@gamedevchamber.com</p>
+        <p>(+234) 701-555-0000</p>
+    </section>
+
+    <section>
+        <h3>Socials</h3>
+
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <section>
+        <p>
+            WDD 231 Chamber Project
+        </p>
+
+        <p>
+            Osasere
+        </p>
+
+        <p>
+            &copy; <span id="year"></span>
+        </p>
+
+        <p id="lastModified"></p>
+    </section>
+
+</footer>
+
+</body>
+</html>
