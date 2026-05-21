@@ -141,3 +141,216 @@ color: var(--accent);
         justify-content: space-between;
     }
 }
+
+/* HERO */
+
+.hero-section {
+    position: relative;
+    padding: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+
+    top: 50%;
+    left: 10%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+
+    margin-top: 1rem;
+
+    padding: 1rem 1.5rem;
+
+    background: var(--accent);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+/* HOME GRID */
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+
+    padding: 1.5rem;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* EVENTS */
+
+.event {
+    margin-bottom: 1rem;
+}
+
+/* WEATHER */
+
+#current-weather p,
+#forecast p {
+    margin: .5rem 0;
+}
+
+/* SPOTLIGHTS */
+
+.spotlights {
+    padding: 1rem;
+}
+
+#spotlight-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.spotlight-card h3,
+.spotlight-card p,
+.spotlight-card a {
+    padding-inline: 1rem;
+}
+
+.spotlight-card a {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px) {
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* JOIN PAGE */
+
+.join-main {
+    padding: 2rem 1rem;
+}
+
+.join-container {
+    background: white;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 2rem;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.join-container h2 {
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+label {
+    display: grid;
+    gap: .5rem;
+
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    padding: .8rem;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background: var(--accent);
+
+    color: white;
+
+    border: none;
+
+    padding: 1rem;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background: var(--secondary);
+}
