@@ -142,44 +142,98 @@ color: var(--accent);
     }
 }
 
-/* HERO */
+/* =========================
+   GLOBAL
+========================= */
+
+main {
+    width: min(1200px, 95%);
+    margin: auto;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero-section {
     position: relative;
-    padding: 0;
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    margin: 1rem 0 2rem;
 }
+
+/* HERO IMAGE */
 
 .hero-image {
     width: 100%;
-    height: 450px;
+    height: clamp(320px, 70vw, 650px);
+
     object-fit: cover;
+    object-position: center;
+
     display: block;
+
+    filter: brightness(55%);
 }
+
+/* OVERLAY */
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.3)
+    );
+
+    z-index: 1;
+}
+
+/* HERO TEXT */
 
 .hero-text {
     position: absolute;
 
     top: 50%;
-    left: 10%;
+    left: 7%;
 
     transform: translateY(-50%);
 
+    z-index: 2;
+
     color: white;
 
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .hero-text h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
     margin-bottom: 1rem;
 }
+
+.hero-text p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    line-height: 1.7;
+
+    margin-bottom: 1.5rem;
+}
+
+/* CTA BUTTON */
 
 .cta-button {
     display: inline-block;
 
-    margin-top: 1rem;
-
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.8rem;
 
     background: var(--accent);
 
@@ -187,85 +241,153 @@ color: var(--accent);
 
     text-decoration: none;
 
-    border-radius: 5px;
-
     font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: all .3s ease;
 }
 
-/* HOME GRID */
+.cta-button:hover {
+    background: white;
+    color: var(--primary);
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   HOME GRID
+========================= */
 
 .home-grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 
-    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
-/* CARD */
+/* =========================
+   CARDS
+========================= */
 
 .card {
     background: white;
 
     padding: 1.5rem;
 
-    border-radius: 10px;
+    border-radius: 14px;
 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-top: 0;
+
+    color: var(--primary);
+
+    border-bottom: 3px solid var(--accent);
+
+    padding-bottom: .5rem;
+
+    margin-bottom: 1rem;
 }
 
 /* EVENTS */
 
 .event {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/* WEATHER */
+.event h3 {
+    margin-bottom: .5rem;
+}
+
+/* =========================
+   WEATHER
+========================= */
+
+#current-weather {
+    margin-bottom: 1rem;
+}
 
 #current-weather p,
 #forecast p {
     margin: .5rem 0;
 }
 
-/* SPOTLIGHTS */
+/* =========================
+   SPOTLIGHTS
+========================= */
 
 .spotlights {
-    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.spotlights h2 {
+    color: var(--primary);
+
+    margin-bottom: 1.5rem;
 }
 
 #spotlight-container {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .spotlight-card {
     background: white;
 
-    border-radius: 10px;
+    border-radius: 14px;
 
     overflow: hidden;
 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    transition: transform .3s ease;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-6px);
 }
 
 .spotlight-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
+
     object-fit: cover;
 }
 
-.spotlight-card h3,
-.spotlight-card p,
-.spotlight-card a {
-    padding-inline: 1rem;
+.spotlight-card-content {
+    padding: 1.2rem;
+}
+
+.spotlight-card h3 {
+    margin-top: 0;
+
+    color: var(--primary);
 }
 
 .spotlight-card a {
+    display: inline-block;
+
+    margin-top: 1rem;
+
     color: var(--accent);
-    font-weight: bold;
+
     text-decoration: none;
+
+    font-weight: bold;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media screen and (min-width: 768px) {
 
@@ -278,36 +400,66 @@ color: var(--accent);
     }
 }
 
+/* MOBILE */
 
-/* JOIN PAGE */
+@media screen and (max-width: 767px) {
 
-.join-main {
-    padding: 2rem 1rem;
+    .hero-text {
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
 }
 
-.join-container {
-    background: white;
+/* =========================
+   WEEK 4 JOIN PAGE
+========================= */
 
-    max-width: 700px;
+.join-page {
+    display: grid;
+    gap: 2rem;
+
+    padding: 2rem 1rem;
+
+    width: min(1200px, 95%);
 
     margin: auto;
+}
+
+/* FORM */
+
+.form-section {
+    background: white;
 
     padding: 2rem;
 
-    border-radius: 10px;
+    border-radius: 16px;
 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
-.join-container h2 {
+.form-section h2 {
     margin-top: 0;
+
+    color: var(--primary);
 }
+
+/* FORM */
 
 form {
     display: grid;
-    gap: 1rem;
-
-    margin-top: 1.5rem;
+    gap: 1.2rem;
 }
 
 label {
@@ -320,18 +472,28 @@ label {
 input,
 select,
 textarea {
-    padding: .8rem;
+    padding: 1rem;
 
-    border: 1px solid #ccc;
+    border: 1px solid #d1d5db;
 
-    border-radius: 5px;
+    border-radius: 8px;
 
     font-family: inherit;
+
+    font-size: 1rem;
+
+    transition: border .3s ease;
 }
 
-textarea {
-    resize: vertical;
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border: 2px solid var(--accent);
 }
+
+/* SUBMIT BUTTON */
 
 .submit-button {
     background: var(--accent);
@@ -342,15 +504,266 @@ textarea {
 
     padding: 1rem;
 
-    cursor: pointer;
-
-    border-radius: 5px;
+    border-radius: 8px;
 
     font-weight: bold;
 
-    font-size: 1rem;
+    cursor: pointer;
+
+    transition: all .3s ease;
 }
 
 .submit-button:hover {
+    background: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+/* MEMBERSHIP CARDS */
+
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.membership-card {
+    background: white;
+
+    padding: 1.5rem;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+
+    animation: slideUp .8s ease forwards;
+
+    opacity: 0;
+}
+
+/* STAGGERED ANIMATION */
+
+.membership-card:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: .5s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: .7s;
+}
+
+.membership-card h3 {
+    margin-top: 0;
+
+    color: var(--primary);
+}
+
+.membership-card button {
     background: var(--secondary);
+
+    color: white;
+
+    border: none;
+
+    padding: .8rem 1rem;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.membership-card button:hover {
+    background: var(--accent);
+}
+
+/* MODAL */
+
+dialog {
+    border: none;
+
+    border-radius: 16px;
+
+    padding: 2rem;
+
+    max-width: 400px;
+
+    width: 90%;
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,.5);
+}
+
+dialog button {
+    margin-top: 1rem;
+
+    background: var(--accent);
+
+    color: white;
+
+    border: none;
+
+    padding: .8rem 1rem;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+/* THANK YOU PAGE */
+
+.thankyou-page {
+    padding: 3rem 1rem;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.thankyou-card {
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+    max-width: 700px;
+
+    width: 100%;
+}
+
+.thankyou-card h2 {
+    color: var(--primary);
+}
+
+/* ANIMATION */
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 768px) {
+
+    .join-page {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
+
+
+/* =========================
+   WEATHER SECTION
+========================= */
+
+.weather-current-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    background: white;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    margin-bottom: 1rem;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.weather-current-card img {
+    width: 80px;
+}
+
+.weather-current-card h3 {
+    margin: 0;
+
+    color: var(--primary);
+
+    font-size: 2rem;
+}
+
+.weather-current-card p {
+    margin: .3rem 0;
+}
+
+/* FORECAST */
+
+#forecast {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: white;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+    transition: transform .3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-card h4 {
+    margin-top: 0;
+
+    color: var(--primary);
+}
+
+.forecast-card img {
+    width: 60px;
+}
+
+/* ERROR */
+
+.weather-error {
+    color: red;
+
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    #forecast {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-current-card {
+        flex-direction: column;
+        text-align: center;
+    }
 }
