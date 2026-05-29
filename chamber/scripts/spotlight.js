@@ -1,39 +1,72 @@
-const memberURL = "data/members.json";
+const memberURL = "./data/members.json";
+
+const spotlightContainer =
+document.querySelector("#spotlight-container");
 
 async function getMembers() {
 
-    const response = await fetch(memberURL);
+    try {
 
-    const data = await response.json();
+        const response =
+        await fetch(memberURL);
 
-    displaySpotlights(data.members);
+        if (!response.ok) {
+            throw new Error("Could not fetch member data");
+        }
+
+        const members =
+        await response.json();
+
+        displaySpotlights(members);
+
+    } catch(error) {
+
+        console.error(error);
+
+        spotlightContainer.innerHTML = `
+
+            <p>
+                Member spotlight unavailable.
+            </p>
+        `;
+    }
 }
 
 function displaySpotlights(members) {
 
-    const spotlightMembers = members.filter(member =>
-        member.membership === "Gold" ||
-        member.membership === "Silver"
+    spotlightContainer.innerHTML = "";
+
+    /* GOLD = 3
+       SILVER = 2
+    */
+
+    const filteredMembers =
+    members.filter(member =>
+
+        member.membership === 3 ||
+
+        member.membership === 2
     );
 
-    spotlightMembers.sort(() => 0.5 - Math.random());
+    filteredMembers.sort(() =>
+        0.5 - Math.random()
+    );
 
-    const selectedMembers = spotlightMembers.slice(0, 3);
-
-    const container = document.querySelector("#spotlight-container");
-
-    container.innerHTML = "";
+    const selectedMembers =
+    filteredMembers.slice(0, 3);
 
     selectedMembers.forEach(member => {
 
-        const card = document.createElement("section");
+        const card =
+        document.createElement("section");
 
         card.classList.add("spotlight-card");
 
         card.innerHTML = `
 
             <img src="${member.image}"
-                 alt="${member.name}">
+                 alt="${member.name}"
+                 loading="lazy">
 
             <div class="spotlight-card-content">
 
@@ -43,20 +76,29 @@ function displaySpotlights(members) {
 
                 <p>${member.phone}</p>
 
-                <p>${member.membership} Member</p>
+                <p>
+                    ${
+                        member.membership === 3
+                        ? "Gold Member"
+                        : "Silver Member"
+                    }
+                </p>
+
+                <p>
+                    ${member.description}
+                </p>
 
                 <a href="${member.website}"
                    target="_blank">
 
-                   Visit Website
+                    Visit Website
 
                 </a>
 
             </div>
         `;
 
-        container.appendChild(card);
-
+        spotlightContainer.appendChild(card);
     });
 }
 
