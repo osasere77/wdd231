@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thank You | GameDev Chamber</title>
+
+<link rel="stylesheet" href="styles/chamber.css">
+
+<style>
+
+.thankyou-container{
+max-width:900px;
+margin:3rem auto;
+padding:1rem;
+}
+
+.thankyou-card{
+background:white;
+padding:2rem;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.thankyou-card h2{
+text-align:center;
+color:#0f172a;
+margin-bottom:1rem;
+}
+
+.success-message{
+text-align:center;
+font-size:1.1rem;
+color:green;
+margin-bottom:2rem;
+}
+
+.results-grid{
+display:grid;
+gap:1rem;
+}
+
+.result-box{
+background:#f8fafc;
+padding:1rem;
+border-left:5px solid #38bdf8;
+border-radius:8px;
+}
+
+.result-box strong{
+display:block;
+margin-bottom:.3rem;
+color:#0f172a;
+}
+
+.home-btn{
+display:block;
+text-align:center;
+margin-top:2rem;
+padding:1rem;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.home-btn:hover{
+opacity:.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navigation-bar">
+
+<a href="index.html" class="logo-container">
+
+<img
+src="images/11224.jpg"
+alt="GameDev Chamber Logo"
+class="logo-image">
+
+<div>
+
+<h1>GameDev Chamber</h1>
+
+<p>Gaming • Technology • Creativity</p>
+
+</div>
+
+</a>
+
+</div>
+
+</header>
+
+<main class="thankyou-container">
+
+<div class="thankyou-card">
+
+<h2>Application Submitted Successfully</h2>
+
+<p class="success-message">
+
+Thank you for applying to join the GameDev Chamber.
+Your application has been received successfully.
+
+</p>
+
+<div
+id="results"
+class="results-grid">
+</div>
+
+<a
+href="index.html"
+class="home-btn">
+
+Return Home
+
+</a>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<h3>GameDev Chamber</h3>
+
+<p>Lagos, Nigeria</p>
+
+<p>support@gamedevchamber.com</p>
+
+<p>+234 701 555 0000</p>
+
+</div>
+
+<div class="social-links">
+
+<a href="https://facebook.com">
+Facebook
+</a>
+
+<a href="https://youtube.com">
+YouTube
+</a>
+
+<a href="https://linkedin.com">
+LinkedIn
+</a>
+
+</div>
+
+<div>
+
+<p>WDD231 Chamber Project</p>
+
+<p>&copy; 2026 GameDev Chamber</p>
+
+</div>
+
+</footer>
+
+<script>
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+document.getElementById(
+"results"
+).innerHTML = `
+
+<div class="result-box">
+
+<strong>First Name</strong>
+
+${params.get("firstname") || ""}
+
+</div>
+
+<div class="result-box">
+
+<strong>Last Name</strong>
+
+${params.get("lastname") || ""}
+
+</div>
+
+<div class="result-box">
+
+<strong>Email Address</strong>
+
+${params.get("email") || ""}
+
+</div>
+
+<div class="result-box">
+
+<strong>Mobile Phone</strong>
+
+${params.get("phone") || ""}
+
+</div>
+
+<div class="result-box">
+
+<strong>Organization Name</strong>
+
+${params.get("organization") || ""}
+
+</div>
+
+<div class="result-box">
+
+<strong>Membership Level</strong>
+
+${params.get("membership") || ""}
+
+</div>
+
+<div class="result-box">
+
+<strong>Application Date & Time</strong>
+
+${params.get("timestamp") || ""}
+
+</div>
+
+`;
+
+</script>
+
+</body>
+</html>
