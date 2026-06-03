@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Study & Career Navigator - Site Plan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#1e3a8a;
+    --secondary:#38bdf8;
+    --accent:#f59e0b;
+    --light:#f8fafc;
+    --dark:#1f2937;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Roboto',sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,var(--primary),#2563eb);
+    color:white;
+    text-align:center;
+    padding:3rem;
+}
+
+header h1{
+    font-family:'Poppins',sans-serif;
+    font-size:2.5rem;
+}
+
+main{
+    max-width:1100px;
+    margin:auto;
+    padding:2rem;
+}
+
+section{
+    background:white;
+    margin-bottom:2rem;
+    padding:1.5rem;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+h2{
+    color:var(--primary);
+    margin-bottom:1rem;
+    font-family:'Poppins',sans-serif;
+}
+
+.color-card{
+    display:inline-block;
+    width:120px;
+    height:80px;
+    border-radius:8px;
+    margin:10px;
+    border:1px solid #ddd;
+}
+
+.primary{background:#1e3a8a;}
+.secondary{background:#38bdf8;}
+.accent{background:#f59e0b;}
+
+.wireframe{
+    border:2px dashed var(--primary);
+    padding:20px;
+    margin-top:15px;
+    background:#f8fafc;
+}
+
+.box{
+    border:1px solid #999;
+    padding:15px;
+    margin:10px 0;
+    text-align:center;
+    background:white;
+}
+
+footer{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+    padding:1rem;
+}
+
+ul{
+    padding-left:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Smart Study & Career Navigator</h1>
+    <p>WDD 231 Individual Project Site Plan</p>
+</header>
+
+<main>
+
+<section>
+    <h2>1. Site Name</h2>
+
+    <p><strong>Smart Study & Career Navigator</strong></p>
+
+    <p>
+        This name was selected because the website helps students
+        navigate both their academic journey and future careers.
+        It combines study planning, career exploration, and skill
+        development into one modern platform. The word "Smart"
+        emphasizes technology-driven guidance and interactive tools.
+    </p>
+
+    <p>
+        <strong>Optional Domain:</strong>
+        smartstudynavigator.com
+    </p>
+</section>
+
+<section>
+    <h2>2. Site Purpose</h2>
+
+    <p>
+        The Smart Study & Career Navigator website provides
+        students and young professionals with career guidance,
+        study planning tools, and skill development resources.
+        Users can explore career pathways, discover required
+        skills, create study roadmaps, and access educational
+        resources through an engaging and interactive experience.
+    </p>
+</section>
+
+<section>
+    <h2>3. Scenarios</h2>
+
+    <ul>
+        <li>
+            What skills and certifications do I need to become a Software Developer?
+        </li>
+
+        <li>
+            Which career path best matches my interests and strengths?
+        </li>
+
+        <li>
+            How can I create an effective study plan for my career goals?
+        </li>
+
+        <li>
+            What learning resources can help me improve my technical and professional skills?
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>4. Color Scheme</h2>
+
+    <div class="color-card primary"></div>
+    <p>
+        <strong>#1E3A8A (Deep Blue)</strong> –
+        Used for headers, navigation, footer, and major sections.
+    </p>
+
+    <div class="color-card secondary"></div>
+    <p>
+        <strong>#38BDF8 (Sky Blue)</strong> –
+        Used for cards, highlights, links, and interactive elements.
+    </p>
+
+    <div class="color-card accent"></div>
+    <p>
+        <strong>#F59E0B (Amber)</strong> –
+        Used for buttons, call-to-action sections, and alerts.
+    </p>
+</section>
+
+<section>
+    <h2>5. Typography</h2>
+
+    <p>
+        <strong>Poppins</strong> –
+        Used for headings, titles, navigation menus, and featured sections.
+    </p>
+
+    <p>
+        <strong>Roboto</strong> –
+        Used for paragraphs, descriptions, forms, and general content.
+    </p>
+</section>
+
+<section>
+    <h2>6. Wireframes</h2>
+
+    <h3>Mobile View</h3>
+
+    <div class="wireframe">
+        <div class="box">Logo & Navigation Menu</div>
+        <div class="box">Hero Section</div>
+        <div class="box">Career Explorer</div>
+        <div class="box">Featured Skills</div>
+        <div class="box">Study Planner</div>
+        <div class="box">Resources</div>
+        <div class="box">Footer</div>
+    </div>
+
+    <h3>Desktop / Tablet View</h3>
+
+    <div class="wireframe">
+        <div class="box">Header + Navigation Bar</div>
+        <div class="box">Hero Banner with Search Tool</div>
+        <div class="box">Career Explorer | Study Planner</div>
+        <div class="box">Skills Dashboard | Learning Resources</div>
+        <div class="box">Testimonials & Success Stories</div>
+        <div class="box">Footer</div>
+    </div>
+
+    <!-- Replace these with your own sketches if required -->
+    <!--
+    <img src="images/mobile-wireframe.jpg" alt="Mobile Wireframe">
+    <img src="images/desktop-wireframe.jpg" alt="Desktop Wireframe">
+    -->
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Smart Study & Career Navigator | WDD 231 Site Plan</p>
+</footer>
+
+</body>
+</html>
