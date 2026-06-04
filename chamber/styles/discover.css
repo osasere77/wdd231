@@ -1,0 +1,161 @@
+/* ---------- DISCOVER PAGE ---------- */
+
+.visitor-message {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: linear-gradient(135deg, #38bdf8, #0f172a);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.visitor-message h2 {
+    margin-top: 0;
+    color: white;
+}
+
+/* ---------- GRID LAYOUT ---------- */
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: auto;
+
+    grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight";
+}
+
+.place-card:nth-child(1){grid-area:one;}
+.place-card:nth-child(2){grid-area:two;}
+.place-card:nth-child(3){grid-area:three;}
+.place-card:nth-child(4){grid-area:four;}
+.place-card:nth-child(5){grid-area:five;}
+.place-card:nth-child(6){grid-area:six;}
+.place-card:nth-child(7){grid-area:seven;}
+.place-card:nth-child(8){grid-area:eight;}
+
+/* ---------- CARD DESIGN ---------- */
+
+.place-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.place-card h2 {
+    background: #0f172a;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.place-card figure {
+    margin: 0;
+}
+
+.place-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.place-card address {
+    padding: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #334155;
+}
+
+.place-card p {
+    padding: 0 1rem 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.place-card button {
+    margin: 1rem;
+    padding: .8rem 1.2rem;
+    border: none;
+    background: #38bdf8;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.place-card button:hover {
+    background: #0284c7;
+}
+
+/* ---------- IMAGE EFFECTS ---------- */
+
+@media (min-width: 641px) {
+
+    .place-card img {
+        transition: .5s;
+    }
+
+    .place-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+/* ---------- MEDIUM VIEW ---------- */
+
+@media (min-width: 641px) {
+
+    .discover-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "one two"
+            "three four"
+            "five six"
+            "seven eight";
+    }
+}
+
+/* ---------- LARGE VIEW ---------- */
+
+@media (min-width: 1025px) {
+
+    .discover-grid {
+
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+
+        grid-template-areas:
+            "one one two"
+            "three four two"
+            "five six seven"
+            "eight eight seven";
+    }
+}
