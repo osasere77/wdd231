@@ -1,100 +1,23 @@
 import { places } from "../data/places.mjs";
 
-const container =
-document.querySelector("#discoverCards");
+console.log("Places loaded:", places);
 
-places.forEach((place) => {
+const container = document.querySelector("#discoverCards");
 
-const card =
-document.createElement("article");
+if (!container) {
+    console.error("discoverCards container not found");
+}
 
-card.classList.add("place-card");
+places.forEach(place => {
+    const card = document.createElement("article");
 
-card.innerHTML = `
+    card.innerHTML = `
+        <h2>${place.name}</h2>
+        <img src="${place.image}" alt="${place.name}" loading="lazy">
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button>Learn More</button>
+    `;
 
-<h2>${place.name}</h2>
-
-<figure>
-
-<img
-src="${place.image}"
-alt="${place.name}"
-loading="lazy">
-
-</figure>
-
-<address>
-
-${place.address}
-
-</address>
-
-<p>
-
-${place.description}
-
-</p>
-
-<button>
-
-Learn More
-
-</button>
-
-`;
-
-container.appendChild(card);
-
+    container.appendChild(card);
 });
-
-// Local Storage Visit Message
-
-const message =
-document.getElementById("visitMessage");
-
-const lastVisit =
-localStorage.getItem("lastVisit");
-
-const now = Date.now();
-
-if (!lastVisit) {
-
-message.textContent =
-"Welcome! Let us know if you have any questions.";
-
-} else {
-
-const days =
-Math.floor(
-(now - Number(lastVisit))
-/
-86400000
-);
-
-if (days < 1) {
-
-message.textContent =
-"Back so soon! Awesome!";
-
-}
-
-else if (days === 1) {
-
-message.textContent =
-"You last visited 1 day ago.";
-
-}
-
-else {
-
-message.textContent =
-`You last visited ${days} days ago.`;
-
-}
-
-}
-
-localStorage.setItem(
-"lastVisit",
-now
-);
