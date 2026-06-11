@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Explorer | Smart Study & Career Navigator</title>
+
+<meta name="description" content="Explore career opportunities, required skills, salaries, and education pathways.">
+
+<meta name="author" content="Your Name">
+
+<meta property="og:title" content="Career Explorer | SSCN">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero.webp">
+<meta property="og:url" content="https://yourgithubpagesurl.com/careers.html">
+<meta property="og:description" content="Discover careers and the skills needed for success.">
+
+<link rel="icon" href="images/favicon.ico">
+
+<link rel="stylesheet" href="styles/site.css">
+
+<script type="module" src="scripts/careers.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>Smart Study & Career Navigator</h1>
+</div>
+
+<button id="menuBtn" aria-label="Navigation Menu">
+☰
+</button>
+
+<nav id="navMenu">
+<a href="index.html">Home</a>
+<a href="careers.html" class="active">Careers</a>
+<a href="planner.html">Study Planner</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<h2>Career Explorer</h2>
+
+<p>
+Explore high-demand careers, discover required skills,
+and find the educational path that fits your future.
+</p>
+
+</section>
+
+<section class="features">
+
+<h2>Career Statistics</h2>
+
+<div id="stats" class="cards"></div>
+
+</section>
+
+<section class="features">
+
+<h2>Filter Careers</h2>
+
+<select id="careerFilter">
+
+<option value="all">
+All Careers
+</option>
+
+<option value="Technology">
+Technology
+</option>
+
+<option value="Business">
+Business
+</option>
+
+<option value="Healthcare">
+Healthcare
+</option>
+
+<option value="Engineering">
+Engineering
+</option>
+
+</select>
+
+</section>
+
+<section>
+
+<h2>Available Careers</h2>
+
+<div id="careerContainer" class="cards">
+
+<!-- JavaScript will generate career cards here -->
+
+</div>
+
+</section>
+
+<dialog id="careerModal">
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalDescription"></p>
+
+<p id="modalSalary"></p>
+
+<p id="modalEducation"></p>
+
+<p id="modalSkills"></p>
+
+<button id="closeModal" class="btn">
+Close
+</button>
+
+</dialog>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 Smart Study & Career Navigator
+</p>
+
+<a href="attributions.html">
+Attributions
+</a>
+
+|
+
+<a
+href="https://youtube.com"
+target="_blank"
+>
+Project Video
+</a>
+
+</footer>
+
+</body>
+</html>
+```

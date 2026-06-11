@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Study Planner | SSCN</title>
+
+<meta name="description" content="Create and manage study goals.">
+<meta name="author" content="Your Name">
+
+<link rel="stylesheet" href="styles/site.css">
+
+<script type="module" src="scripts/planner.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>Smart Study & Career Navigator</h1>
+</div>
+
+<button id="menuBtn">☰</button>
+
+<nav id="navMenu">
+<a href="index.html">Home</a>
+<a href="careers.html">Careers</a>
+<a href="planner.html" class="active">Study Planner</a>
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<h2>Study Planner</h2>
+
+<p>
+Create study goals and track your progress.
+</p>
+
+</section>
+
+<section class="features">
+
+<h2>Add New Goal</h2>
+
+<form id="goalForm">
+
+<label for="goal">
+Study Goal
+</label>
+
+<input
+type="text"
+id="goal"
+required
+placeholder="Learn JavaScript"
+/>
+
+<label for="deadline">
+Deadline
+</label>
+
+<input
+type="date"
+id="deadline"
+required
+/>
+
+<button type="submit" class="btn">
+Save Goal
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>My Goals</h2>
+
+<div id="goalContainer" class="cards"></div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 Smart Study & Career Navigator
+</p>
+
+<a href="attributions.html">
+Attributions
+</a>
+
+</footer>
+
+</body>
+</html>

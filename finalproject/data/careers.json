@@ -1,0 +1,137 @@
+[
+{
+"id":1,
+"name":"Software Developer",
+"category":"Technology",
+"salary":"$95,000",
+"education":"Bachelor Degree",
+"skills":"JavaScript, HTML, CSS",
+"description":"Designs and develops software applications."
+},
+{
+"id":2,
+"name":"Cybersecurity Analyst",
+"category":"Technology",
+"salary":"$98,000",
+"education":"Bachelor Degree",
+"skills":"Security, Networking",
+"description":"Protects computer systems and networks."
+},
+{
+"id":3,
+"name":"Data Scientist",
+"category":"Technology",
+"salary":"$115,000",
+"education":"Bachelor Degree",
+"skills":"Python, Statistics",
+"description":"Analyzes data for business insights."
+},
+{
+"id":4,
+"name":"Web Designer",
+"category":"Technology",
+"salary":"$72,000",
+"education":"Diploma",
+"skills":"UI Design, CSS",
+"description":"Creates website layouts and interfaces."
+},
+{
+"id":5,
+"name":"Cloud Engineer",
+"category":"Technology",
+"salary":"$120,000",
+"education":"Bachelor Degree",
+"skills":"AWS, Azure",
+"description":"Builds cloud infrastructure solutions."
+},
+{
+"id":6,
+"name":"Accountant",
+"category":"Business",
+"salary":"$70,000",
+"education":"Bachelor Degree",
+"skills":"Finance, Excel",
+"description":"Manages financial records."
+},
+{
+"id":7,
+"name":"Marketing Manager",
+"category":"Business",
+"salary":"$88,000",
+"education":"Bachelor Degree",
+"skills":"Marketing, Analytics",
+"description":"Develops marketing campaigns."
+},
+{
+"id":8,
+"name":"Business Analyst",
+"category":"Business",
+"salary":"$90,000",
+"education":"Bachelor Degree",
+"skills":"Analysis, Reporting",
+"description":"Improves business processes."
+},
+{
+"id":9,
+"name":"Financial Advisor",
+"category":"Business",
+"salary":"$85,000",
+"education":"Bachelor Degree",
+"skills":"Investments, Planning",
+"description":"Provides financial guidance."
+},
+{
+"id":10,
+"name":"Project Manager",
+"category":"Business",
+"salary":"$102,000",
+"education":"Bachelor Degree",
+"skills":"Leadership, Planning",
+"description":"Coordinates projects and teams."
+},
+{
+"id":11,
+"name":"Registered Nurse",
+"category":"Healthcare",
+"salary":"$82,000",
+"education":"Nursing Degree",
+"skills":"Patient Care",
+"description":"Provides healthcare support."
+},
+{
+"id":12,
+"name":"Pharmacist",
+"category":"Healthcare",
+"salary":"$118,000",
+"education":"Pharmacy Degree",
+"skills":"Medicine",
+"description":"Dispenses medications."
+},
+{
+"id":13,
+"name":"Civil Engineer",
+"category":"Engineering",
+"salary":"$95,000",
+"education":"Engineering Degree",
+"skills":"Design, Construction",
+"description":"Designs infrastructure projects."
+},
+{
+"id":14,
+"name":"Mechanical Engineer",
+"category":"Engineering",
+"salary":"$98,000",
+"education":"Engineering Degree",
+"skills":"CAD, Manufacturing",
+"description":"Designs mechanical systems."
+},
+{
+"id":15,
+"name":"Electrical Engineer",
+"category":"Engineering",
+"salary":"$100,000",
+"education":"Engineering Degree",
+"skills":"Circuits, Electronics",
+"description":"Develops electrical systems."
+}
+]
